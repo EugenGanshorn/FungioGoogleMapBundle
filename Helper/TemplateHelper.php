@@ -13,14 +13,13 @@ namespace Fungio\GoogleMapBundle\Helper;
 
 use Fungio\GoogleMap\Helper\MapHelper;
 use Fungio\GoogleMap\Map;
-use Symfony\Component\Templating\Helper\Helper;
 
 /**
  * Fungio Google Map Template Helper.
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class TemplateHelper extends Helper
+class TemplateHelper
 {
     /** @var \Fungio\GoogleMap\Helper\MapHelper */
     protected $mapHelper;
