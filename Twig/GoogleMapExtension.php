@@ -13,14 +13,15 @@ namespace Fungio\GoogleMapBundle\Twig;
 
 use Fungio\GoogleMap\Map;
 use Fungio\GoogleMapBundle\Helper\TemplateHelper;
-use Twig_SimpleFunction;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFunction;
 
 /**
  * Fungio google map twig extension.
  *
  * @author GeLo <geloen.eric@gmail.com>
  */
-class GoogleMapExtension extends \Twig_Extension
+class GoogleMapExtension extends AbstractExtension
 {
     /** @var \Fungio\GoogleMapBundle\Helper\TemplateHelper */
     protected $templateHelper;
@@ -49,7 +50,7 @@ class GoogleMapExtension extends \Twig_Extension
 
         $functions = array();
         foreach ($mapping as $twig => $local) {
-            $functions[] = new Twig_SimpleFunction($twig, array($this, $local), array('is_safe' => array('html')));
+            $functions[] = new TwigFunction($twig, array($this, $local), array('is_safe' => array('html')));
         }
 
         return $functions;

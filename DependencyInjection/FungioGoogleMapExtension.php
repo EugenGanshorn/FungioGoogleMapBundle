@@ -1443,7 +1443,7 @@ class FungioGoogleMapExtension extends Extension
      */
     protected function loadPlacesAutocomplete(array $config, ContainerBuilder $container)
     {
-        $templatingEngines = $container->getParameter('templating.engines');
+        /*$templatingEngines = $container->getParameter('templating.engines');
 
         if (in_array('php', $templatingEngines)) {
             $phpFormResources = $container->hasParameter('templating.helper.form.resources')
@@ -1465,7 +1465,7 @@ class FungioGoogleMapExtension extends Extension
                 'twig.form.resources',
                 array_merge($twigFormResources, array('FungioGoogleMapBundle:Form:places_autocomplete_widget.html.twig'))
             );
-        }
+        }*/
     }
 
     /**
